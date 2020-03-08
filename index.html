@@ -32,39 +32,35 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 5%">
-        
-        <img src="images/piggy.png"></img>
-        <h1>Piggy Value</h1>
-        Start saving. Know what your piggy bank is worth!
-        <br>
-        <br>
-        <h4>Savings: $ <span id="savingsAmount"></span></h4>
-
-        <input class="u-full-width" placeholder="Enter amount" id="userInput">
-        
-
-      </div>
-      
+    <!-- LHS -->
+    <div class="three columns" id="lhs">
+      <img src="images/piggy.png"></img>
+      <h1>Piggy Value</h1>
+      Start saving. Know what your piggy bank is worth! 
+      <br>
     </div>
-    <div  class="one-half column"></div>
-         <div class="row">
-      <div>
-        <button onclick="addMoney()">Add money</button>
-        <button onclick="random()">Randomize</button>     
-        <button onclick="inflate()">Next Year: 2% Inflation</button>
+
+    <!-- RHS -->
+    <div class="four columns" id="rhs">
+  
+          <br>
+          <br>
+
+          <br>
+          <h4>Savings Balance: $ <span id="savingsAmount"></span></h4>
+
+          <input class="u-full-width" placeholder="Enter amount" id="userInput">
+
+        <button class="button-primary" onclick="addMoney()">Add money</button>
+        <button class="button-primary" onclick="random()">Randomize</button>     
+        <button class="button-primary" onclick="inflate()">Next Year: 2% Inflation</button>
         <br>
         <br>
         <br>
         <section id="worthArea">
 
         </section>
-
-        <br>
-        <br>
-      </div>
-      </div>
+    </div>
   </div>
 
 <!-- End Document

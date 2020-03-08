@@ -58,7 +58,7 @@ function addWorth(num) {
     } else {
       for (let i = 0; i < numOfClasses; i++) {
         var classes = document.createElement("img");
-        classes.setAttribute("src", "images/class.png");
+        classes.setAttribute("src", "images/class.jpeg");
         document.getElementById("worthArea").appendChild(classes);
       }
     }
