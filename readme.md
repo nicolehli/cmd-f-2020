@@ -2,7 +2,8 @@
 
 Built with Vanila javascript, HTML, CSS
 
-## Demo:
+## Piggy Value Demo:
+Understand the value of a dollar and the concept of inflation visually.
 
 <p align=center>
   <img src="demo2020.gif"/>
