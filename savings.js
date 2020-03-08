@@ -1,5 +1,10 @@
 let savings = 0.0;
 let currentNum = 0;
+let prices = {
+  food: 5.0,
+  movie: 12.0,
+  class: 600.0
+};
 
 function showSavings() {
   document.getElementById("savingsAmount").innerHTML = savings.toFixed(2);
@@ -10,15 +15,10 @@ function addMoney() {
     let temp = savings + parseFloat(document.getElementById("userInput").value);
     savings = temp;
     document.getElementById("savingsAmount").innerHTML = savings.toFixed(2);
+    document.getElementById("worthArea").innerHTML = "";
     addWorth(currentNum);
   }
 }
-
-let prices = {
-  food: 5.0,
-  movie: 12.0,
-  class: 600.0
-};
 
 function addWorth(num) {
   if (num == 0) {
@@ -75,12 +75,17 @@ function random() {
 }
 
 function inflate() {
+  console.log(prices);
   let keys = Object.keys(prices);
   for (let k of keys) {
-    prices[k] = parseFloat(prices[k] * 1.02).toFixed(2);
+    prices[k] = (parseFloat(prices[k]) + parseFloat(prices[k] * 0.02)).toFixed(
+      2
+    );
   }
-  document.getElementById("worthArea").innerHTML =
-    "Prices have been inflated 2%. For example: " +
-    JSON.stringify(prices) +
-    "  Is your saving beating inflation?";
+  // document.getElementById("worthArea").innerHTML = "";
+  // document.getElementById("worthArea").innerHTML =
+  //   "Prices have been inflated 2%. For example: " +
+  //   JSON.stringify(prices) +
+  //   "  Is your saving beating inflation?";
+  addWorth(currentNum);
 }
